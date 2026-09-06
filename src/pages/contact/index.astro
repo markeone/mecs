@@ -1,16 +1,96 @@
 ---
 import Layout from '../../layouts/default.astro';
-
 ---
-<Layout title="Contact | MECS" description="Contact ME Computer Services for practical IT help.">
+
+<Layout title="Contact MECS | Check whether your job is suitable" description="Contact MECS about remote-first fixed-price IT support for computers, Linux, Docker, storage, hardware and small networks.">
   <main>
-    <section class="hero">
-      <h1>Contact MECS</h1>
-      <p class="tagline">Practical IT help. Clear fixed prices.</p>
+    <!-- Introduction -->
+    <section class="intro">
+      <h1>Tell MECS what is happening</h1>
+      <p>
+        Send a short description of the problem and MECS will check whether it fits one of the fixed-price services.
+      </p>
+      <p>
+        Support is remote-first and by appointment. Enquiries are checked for suitability before work is accepted.
+        MECS does not offer emergency, 24/7 or guaranteed-response support.
+      </p>
     </section>
 
-    <section class="contact-message">
-      <p>MECS is preparing its enquiry service. Contact details and the enquiry form will be published before launch.</p>
+    <!-- Email contact -->
+    <section class="email-contact">
+      <h2>Email MECS</h2>
+      <p>
+        <a href="mailto:mr.markeggleston@gmail.com?subject=MECS%20service%20enquiry" class="cta-button">
+          mr.markeggleston@gmail.com
+        </a>
+      </p>
+      <p>
+        <a href="mailto:mr.markeggleston@gmail.com?subject=MECS%20service%20enquiry" class="cta-button">
+          Email MECS
+        </a>
+      </p>
+    </section>
+
+    <!-- Enquiry checklist -->
+    <section class="enquiry-checklist">
+      <h2>What to include in your email</h2>
+      <ul>
+        <li>Your name</li>
+        <li>Which service you think may fit, if known</li>
+        <li>The device or system involved</li>
+        <li>Operating system and version, if known</li>
+        <li>A plain description of what is happening</li>
+        <li>Exact error messages, if available</li>
+        <li>When the problem began</li>
+        <li>Any recent changes</li>
+        <li>Whether the affected system starts and has internet access</li>
+        <li>Whether important data is backed up</li>
+        <li>Suitable times for an appointment</li>
+      </ul>
+    </section>
+
+    <!-- Security warning -->
+    <section class="security-warning">
+      <h2>Security warning</h2>
+      <p>
+        Do not email passwords, recovery codes, private keys, API tokens, remote-access credentials or payment-card details.
+      </p>
+      <p>
+        MECS will never ask you to send a password by email. Where credentials are required during an attended session,
+        you enter them yourself.
+      </p>
+    </section>
+
+    <!-- What happens next -->
+    <section class="what-happens-next">
+      <h2>What happens next</h2>
+      <ol>
+        <li>MECS reviews whether the enquiry is suitable for remote support.</li>
+        <li>If suitable, MECS confirms the scope, fixed price and appointment before work begins.</li>
+        <li>Remote access is started only with the customer’s permission during the agreed session.</li>
+      </ol>
+    </section>
+
+    <!-- Pricing reminder -->
+    <section class="pricing-reminder">
+      <h2>Pricing reminder</h2>
+      <p>
+        Fixed-price services currently range from £55 to £85. Additional remote time, where suitable and agreed in advance,
+        is £27.50 per 30 minutes.
+      </p>
+      <p>
+        <a href="/services/" class="cta-button">View full service scopes and prices</a>
+      </p>
+      <p>
+        MECS is not VAT registered, so no VAT is added to the displayed prices.
+      </p>
+    </section>
+
+    <!-- Privacy notice -->
+    <section class="privacy-notice">
+      <p>
+        <a href="/privacy/">Read how enquiry information is handled</a>
+      </p>
     </section>
   </main>
 </Layout>
