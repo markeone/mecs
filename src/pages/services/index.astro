@@ -1,53 +1,5 @@
 ---
 import Layout from '../../layouts/default.astro';
-
-// Services data with placeholders for prices and details
-const services = [
-  {
-    id: 'it-support',
-    title: 'IT Support',
-    description: 'On-site and remote technical support for hardware, software, and network issues.',
-    features: [
-      'Same-day response for critical issues',
-      'Remote diagnostics and repair',
-      'Preventive maintenance schedules'
-    ],
-    pricePlaceholder: 'Launch price being finalised.'
-  },
-  {
-    id: 'network-setup',
-    title: 'Network Setup & Configuration',
-    description: 'Design and installation of wired and wireless networks for homes and businesses.',
-    features: [
-      'Network security configuration',
-      'Wi-Fi coverage optimization',
-      'VPN and remote access setup'
-    ],
-    pricePlaceholder: 'Launch price being finalised.'
-  },
-  {
-    id: 'data-backup',
-    title: 'Data Backup & Recovery',
-    description: 'Automated backup solutions to protect against data loss.',
-    features: [
-      'Local and cloud backup options',
-      'Regular backup verification',
-      'Disaster recovery planning'
-    ],
-    pricePlaceholder: 'Launch price being finalised.'
-  },
-  {
-    id: 'hardware-upgrade',
-    title: 'Hardware Upgrades & Repair',
-    description: 'Upgrading and repairing computers, laptops, and peripherals.',
-    features: [
-      'SSD installation and data migration',
-      'Memory and graphics card upgrades',
-      'Liquid cooling and custom builds'
-    ],
-    pricePlaceholder: 'Launch price being finalised.'
-  }
-];
 ---
 
 <Layout title="Services | MECS" description="Practical IT services with clear fixed prices.">
@@ -57,39 +9,161 @@ const services = [
       <p class="tagline">Practical IT help. Clear fixed prices.</p>
     </section>
 
-    <section class="services-list">
-      {services.map(service => (
-        <article class="service-item" id={service.id}>
-          <h2>{service.title}</h2>
-          <p>{service.description}</p>
-          
-          <h3>What's Included</h3>
-          <ul class="features-list">
-            {service.features.map(feature => (
-              <li>{feature}</li>
-            ))}
-          </ul>
-          
-          <div class="price-info">
-            <p><strong>Pricing:</strong> {service.pricePlaceholder}</p>
-            <p>The scope and fixed price are agreed before work begins.</p>
-          </div>
-          
-          <a href="#it-support" class="cta-button">Contact for Details</a>
-        </article>
-      ))}
+    <!-- Introductory section -->
+    <section class="intro">
+      <h2>Clear help. Agreed scope. Fixed price.</h2>
+      <p>
+        Each package provides a focused investigation, agreed safe actions where applicable,
+        and a plain‑English summary of findings and next steps.
+      </p>
     </section>
 
-    <section class="service-approach">
-      <h2>Our Approach</h2>
-      <p>At MECS, we believe in transparent, fixed pricing for IT services. We provide clear quotes before any work begins, so you know exactly what you'll pay.</p>
-      <p>All services include:</p>
+    <!-- Six service cards -->
+    <section class="services-list">
+      <!-- Windows or Linux Computer Health Check -->
+      <article class="service-item">
+        <h2>Windows or Linux Computer Health Check</h2>
+        <p><strong>Price:</strong> £55 — up to 1 hour</p>
+        <p><strong>Suitable for:</strong> Home users, sole traders, small businesses needing a general checkup.</p>
+        <h3>Included checks</h3>
+        <ul>
+          <li>OS version and update status</li>
+          <li>Antivirus/anti‑malware status</li>
+          <li>Disk health (SMART status, free space)</li>
+          <li>Memory (RAM) quick error check (if safe)</li>
+          <li>Startup programs and services review</li>
+        </ul>
+        <p><strong>Boundary:</strong> No repair or fix work is performed.</p>
+        <p><strong>Outcome:</strong> A report detailing current health, recommendations, and fixed price for any agreed follow‑up work.</p>
+      </article>
+
+      <!-- Linux Cleanup and Troubleshooting -->
+      <article class="service-item">
+        <h2>Linux Cleanup and Troubleshooting</h2>
+        <p><strong>Price:</strong> £85 — up to 1.5 hours</p>
+        <p><strong>Suitable for:</strong> Linux desktop or server users experiencing slow performance or service failures.</p>
+        <h3>Included checks</h3>
+        <ul>
+          <li>System logs (journalctl, /var/log) for errors</li>
+          <li>Running processes and resource usage</li>
+          <li>Disk usage and cleanup of temporary files (agreed)</li>
+          <li>Essential services status</li>
+          <li>Basic security check (firewall, open ports, user accounts)</li>
+        </ul>
+        <p><strong>Boundary:</strong> Cleanup actions require explicit customer approval.</p>
+        <p><strong>Outcome:</strong> A report on actions taken, findings, and recommendations for ongoing maintenance.</p>
+      </article>
+
+      <!-- Docker Problem Diagnosis -->
+      <article class="service-item">
+        <h2>Docker Problem Diagnosis</h2>
+        <p><strong>Price:</strong> £55 — up to 1 hour</p>
+        <p><strong>Suitable for:</strong> Users running Docker containers facing startup, image, or daemon issues.</p>
+        <h3>Included checks</h3>
+        <ul>
+          <li>Docker daemon logs (read‑only)</li>
+          <li>Listing of containers, images, networks, volumes</li>
+          <li>Inspection of specific problematic containers (no secrets)</li>
+          <li>Attempt to reproduce the issue</li>
+          <li>Docker configuration and version check</li>
+        </ul>
+        <p><strong>Boundary:</strong> Fixes are excluded unless a trivial reversible change is approved.</p>
+        <p><strong>Outcome:</strong> A diagnosis of the Docker‑related problem, steps to reproduce, and recommended solution or workaround.</p>
+      </article>
+
+      <!-- NAS, Storage and Backup Health Review -->
+      <article class="service-item">
+        <h2>NAS, Storage and Backup Health Review</h2>
+        <p><strong>Price:</strong> £85 — up to 1.5 hours</p>
+        <p><strong>Suitable for:</strong> Users of NAS devices, external storage, or backup solutions wanting a health check.</p>
+        <h3>Included checks</h3>
+        <ul>
+          <li>Storage system logs (if accessible, read‑only)</li>
+          <li>Disk health (SMART status per disk)</li>
+          <li>RAID or storage pool status and consistency</li>
+          <li>Filesystem errors (non‑destructive checks if safe)</li>
+          <li>Shared folders, permissions, and access controls</li>
+        </ul>
+        <p><strong>Boundary:</strong> No filesystem repair, RAID rebuild, or test restoration.</p>
+        <p><strong>Outcome:</strong> A report on the health of the storage system, backup configuration, and recommendations for improving data safety.</p>
+      </article>
+
+      <!-- Hardware and Performance Diagnosis -->
+      <article class="service-item">
+        <h2>Hardware and Performance Diagnosis</h2>
+        <p><strong>Price:</strong> £55 — up to 1 hour</p>
+        <p><strong>Suitable for:</strong> Users experiencing slow performance, crashes, or hardware‑related issues.</p>
+        <h3>Included checks</h3>
+        <ul>
+          <li>System logs for hardware errors (Event Viewer, dmesg, journalctl)</li>
+          <li>CPU and temperature readings (if sensors available)</li>
+          <li>Memory (RAM) quick error check (if safe)</li>
+          <li>Disk health (SMART status, short bad‑sector scan if agreed)</li>
+          <li>Device manager (Windows) or lspci/lsusb (Linux) for missing drivers</li>
+        </ul>
+        <p><strong>Boundary:</strong> No physical disassembly, hardware repair, or component replacement.</p>
+        <p><strong>Outcome:</strong> A diagnosis of likely hardware cause(s), recommendations for testing or replacement, and fixed price for agreed follow‑up work.</p>
+      </article>
+
+      <!-- Home or Small-Office Network Diagnosis -->
+      <article class="service-item">
+        <h2>Home or Small-Office Network Diagnosis</h2>
+        <p><strong>Price:</strong> £55 — up to 1 hour</p>
+        <p><strong>Suitable for:</strong> Users with internet connectivity, Wi‑Fi, or device connectivity issues.</p>
+        <h3>Included checks</h3>
+        <ul>
+          <li>Public IP address and internet connectivity from the router</li>
+          <li>Router status lights and basic info (if accessible)</li>
+          <li>Connectivity to the router (ping, DNS resolution)</li>
+          <li>Wi‑Fi scan for channel overlap and signal strength (if wireless device available)</li>
+          <li>IP address assignment (DHCP) and DNS settings on a test device</li>
+          <li>Basic router settings (WAN/LAN, Wi‑Fi SSID/password, DHCP range, port forwarding)</li>
+        </ul>
+        <p><strong>Boundary:</strong> No changes to WAN, LAN, DHCP, DNS, Wi‑Fi, firewall, or port‑forwarding unless a small reversible change is explicitly approved.</p>
+        <p><strong>Outcome:</strong> A diagnosis of likely network issue(s), recommendations for improving connectivity or security, and fixed price for agreed follow‑up work.</p>
+      </article>
+    </section>
+
+    <!-- How it works -->
+    <section class="how-it-works">
+      <h2>How it works</h2>
+      <ol>
+        <li>Tell MECS what is happening.</li>
+        <li>MECS checks suitability and confirms the scope.</li>
+        <li>Attend the agreed remote session.</li>
+        <li>Receive a summary and recommended next steps.</li>
+      </ol>
+    </section>
+
+    <!-- Before we begin -->
+    <section class="before-we-begin">
+      <h2>Before we begin</h2>
       <ul>
-        <li>Free initial consultation</li>
-        <li>Clear, written scope of work</li>
-        <li>Fixed price agreement</li>
-        <li>Satisfaction guarantee</li>
+        <li>The customer remains present during remote access.</li>
+        <li>The customer enters passwords themselves.</li>
+        <li>MECS does not ask customers to send passwords.</li>
+        <li>Important data should be backed up before approved changes.</li>
+        <li>No change is made without agreement.</li>
+        <li>Remote access is removed or closed after the session.</li>
       </ul>
+    </section>
+
+    <!-- Pricing boundaries -->
+    <section class="pricing-boundaries">
+      <h2>Pricing boundaries</h2>
+      <ul>
+        <li>Payment buys the agreed time and work, not a guaranteed repair.</li>
+        <li>Some faults cannot be fully diagnosed remotely.</li>
+        <li>Work stops at the agreed boundary.</li>
+        <li>Further work proceeds only with a separate agreement.</li>
+      </ul>
+    </section>
+
+    <!-- Call to action -->
+    <section class="call-to-action">
+      <p>
+        <a href="/contact/" class="cta-button">Check whether your job is suitable</a>
+      </p>
     </section>
   </main>
 </Layout>
