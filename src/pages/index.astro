@@ -2,26 +2,41 @@
 import Layout from '../layouts/default.astro';
 
 // Page metadata
-const pageTitle = 'Home | Heromes Website';
-const pageDescription = 'Welcome to our website - We provide excellent digital services.';
+const title = 'Home | MECS';
+const description = 'Practical IT help. Clear fixed prices.';
 ---
 
-<Layout title={pageTitle} description={pageDescription}>
+<Layout title={title} description={description}>
   <main>
     <section class="hero">
-      <h1>Welcome to Heromes</h1>
-      <p>{ pageDescription }</p>
+      <h1>ME Computer Services</h1>
+      <p class="tagline">Practical IT help. Clear fixed prices.</p>
+      <a href="/services" class="cta-button">View Our Services</a>
     </section>
     
-    <section class="features">
-      <h2>What we do</h2>
-      <ul>
-        <li>Web Development</li>
-        <li>Consulting</li>
-        <li>Support Services</li>
-      </ul>
+    <section class="services-preview">
+      <h2>Our Core Services</h2>
+      <div class="services-list">
+        <div class="service-item">
+          <h3>IT Support</h3>
+          <p>On-site and remote support for businesses and homes.</p>
+          <a href="/services#it-support">Learn more →</a>
+        </div>
+        <div class="service-item">
+          <h3>Network Setup</h3>
+          <p>Design, install, and configure reliable networks          <a href="/services#network-setup">Learn more →</a>
+        </div>
+        <div class="service-item">
+          <h3>Data Backup</h3>
+          <p>Secure backup solutions to protect your data          <a href="/services#data-backup">Learn more →</a>
+        </div>
+      </div>
     </section>
 
-    <a href="/services">View our services →</a>
+    <section class="about-preview">
+      <h2>About MECS</h2>
+      <p>ME Computer Services provides practical IT solutions with transparent, fixed pricing. We focus on solving your technology problems without jargon or surprise costs.</p>
+      <a href="/about" class="cta-button">Learn About Us</a>
+    </section>
   </main>
 </Layout>

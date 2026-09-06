@@ -1,43 +1,94 @@
 ---
 import Layout from '../../layouts/default.astro';
 
-// Service data object
+// Services data with placeholders for prices and details
 const services = [
-  { 
-    name: 'Web Development', 
-    description: 'Custom websites built with modern technologies.',
-    link: '/services/web-development'
+  {
+    id: 'it-support',
+    title: 'IT Support',
+    description: 'On-site and remote technical support for hardware, software, and network issues.',
+    features: [
+      'Same-day response for critical issues',
+      'Remote diagnostics and repair',
+      'Preventive maintenance schedules'
+    ],
+    pricePlaceholder: 'Launch price being finalised.'
   },
-  { 
-    name: 'Consulting', 
-    description: 'Expert advice to help you achieve your goals.',
-    link: '/services/consulting'
+  {
+    id: 'network-setup',
+    title: 'Network Setup & Configuration',
+    description: 'Design and installation of wired and wireless networks for homes and businesses.',
+    features: [
+      'Network security configuration',
+      'Wi-Fi coverage optimization',
+      'VPN and remote access setup'
+    ],
+    pricePlaceholder: 'Launch price being finalised.'
   },
-  { 
-    name: 'Support Services', 
-    description: 'Ongoing maintenance and support for your projects.',
-    link: '/services/support'
+  {
+    id: 'data-backup',
+    title: 'Data Backup & Recovery',
+    description: 'Automated backup solutions to protect against data loss.',
+    features: [
+      'Local and cloud backup options',
+      'Regular backup verification',
+      'Disaster recovery planning'
+    ],
+    pricePlaceholder: 'Launch price being finalised.'
+  },
+  {
+    id: 'hardware-upgrade',
+    title: 'Hardware Upgrades & Repair',
+    description: 'Upgrading and repairing computers, laptops, and peripherals.',
+    features: [
+      'SSD installation and data migration',
+      'Memory and graphics card upgrades',
+      'Liquid cooling and custom builds'
+    ],
+    pricePlaceholder: 'Launch price being finalised.'
   }
 ];
 ---
 
-<Layout title="Services | Heromes Website" description="Our range of professional services.">
+<Layout title="Services | MECS" description="Practical IT services with clear fixed prices.">
   <main>
     <section class="hero">
       <h1>Our Services</h1>
-      <p>We offer a variety of services to meet your needs.</p>
+      <p class="tagline">Practical IT help. Clear fixed prices.</p>
     </section>
-    
+
     <section class="services-list">
-      <h2>What We Offer</h2>
+      {services.map(service => (
+        <article class="service-item" id={service.id}>
+          <h2>{service.title}</h2>
+          <p>{service.description}</p>
+          
+          <h3>What's Included</h3>
+          <ul class="features-list">
+            {service.features.map(feature => (
+              <li>{feature}</li>
+            ))}
+          </ul>
+          
+          <div class="price-info">
+            <p><strong>Pricing:</strong> {service.pricePlaceholder}</p>
+            <p>The scope and fixed price are agreed before work begins.</p>
+          </div>
+          
+          <a href="#it-support" class="cta-button">Contact for Details</a>
+        </article>
+      ))}
+    </section>
+
+    <section class="service-approach">
+      <h2>Our Approach</h2>
+      <p>At MECS, we believe in transparent, fixed pricing for IT services. We provide clear quotes before any work begins, so you know exactly what you'll pay.</p>
+      <p>All services include:</p>
       <ul>
-        {services.map(service => (
-          <li>
-            <h3>{service.name}</h3>
-            <p>{service.description}</p>
-            <a href={service.link}>Learn more →</a>
-          </li>
-        ))}
+        <li>Free initial consultation</li>
+        <li>Clear, written scope of work</li>
+        <li>Fixed price agreement</li>
+        <li>Satisfaction guarantee</li>
       </ul>
     </section>
   </main>
