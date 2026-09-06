@@ -1,0 +1,19 @@
+---
+// Header component data
+const navItems = [
+  { path: '/', label: 'Home' },
+  { path: '/services', label: 'Services' },
+  { path: '/contact', label: 'Contact' }
+];
+---
+
+<header class="header">
+  <nav>
+    <a href="/" aria-label="Heromes homepage" style="color: inherit;">Logo</a>
+    <ul>
+      {navItems.map(item => (
+        <li><a href={item.path} style="color: inherit; text-decoration: none;">{item.label}</a></li>
+      ))}
+    </ul>
+  </nav>
+</header>

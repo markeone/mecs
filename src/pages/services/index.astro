@@ -1,0 +1,44 @@
+---
+import Layout from '../../layouts/default.astro';
+
+// Service data object
+const services = [
+  { 
+    name: 'Web Development', 
+    description: 'Custom websites built with modern technologies.',
+    link: '/services/web-development'
+  },
+  { 
+    name: 'Consulting', 
+    description: 'Expert advice to help you achieve your goals.',
+    link: '/services/consulting'
+  },
+  { 
+    name: 'Support Services', 
+    description: 'Ongoing maintenance and support for your projects.',
+    link: '/services/support'
+  }
+];
+---
+
+<Layout title="Services | Heromes Website" description="Our range of professional services.">
+  <main>
+    <section class="hero">
+      <h1>Our Services</h1>
+      <p>We offer a variety of services to meet your needs.</p>
+    </section>
+    
+    <section class="services-list">
+      <h2>What We Offer</h2>
+      <ul>
+        {services.map(service => (
+          <li>
+            <h3>{service.name}</h3>
+            <p>{service.description}</p>
+            <a href={service.link}>Learn more →</a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </main>
+</Layout>
