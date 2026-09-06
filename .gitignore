@@ -1,0 +1,15 @@
+# Node.js dependencies
+/node_modules/
+
+# Astro build output
+/dist/
+
+# Astro cache
+/.astro/
+
+# Environment variables
+.env
+.env.*
+
+# Allow example env file
+!.env.example
