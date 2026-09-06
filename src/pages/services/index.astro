@@ -18,6 +18,14 @@ import Layout from '../../layouts/default.astro';
       </p>
     </section>
 
+    <!-- General information -->
+    <section class="general-info">
+      <p>MECS provides remote-first support by appointment. Emergency, 24/7 and guaranteed-response support are not offered.</p>
+      <p>The stated allowance covers the complete package, including the initial discussion, investigation, any agreed safe actions and the written summary.</p>
+      <p>Prices shown are the total customer prices. MECS is not VAT registered, so no VAT is added.</p>
+      <p>Where appropriate, additional remote time can be agreed in advance at £27.50 per 30 minutes. Larger, higher-risk or out-of-scope work requires a separate quotation.</p>
+    </section>
+
     <!-- Six service cards -->
     <section class="services-list">
       <!-- Windows or Linux Computer Health Check -->
@@ -30,11 +38,11 @@ import Layout from '../../layouts/default.astro';
           <li>OS version and update status</li>
           <li>Antivirus/anti‑malware status</li>
           <li>Disk health (SMART status, free space)</li>
-          <li>Memory (RAM) quick error check (if safe)</li>
+          <li>Memory usage and operating-system-reported memory errors</li>
           <li>Startup programs and services review</li>
         </ul>
         <p><strong>Boundary:</strong> No repair or fix work is performed.</p>
-        <p><strong>Outcome:</strong> A report detailing current health, recommendations, and fixed price for any agreed follow‑up work.</p>
+        <p><strong>Outcome:</strong> A plain-English summary of the checks completed, observed health indicators and recommended next steps.</p>
       </article>
 
       <!-- Linux Cleanup and Troubleshooting -->
@@ -47,11 +55,10 @@ import Layout from '../../layouts/default.astro';
           <li>System logs (journalctl, /var/log) for errors</li>
           <li>Running processes and resource usage</li>
           <li>Disk usage and cleanup of temporary files (agreed)</li>
-          <li>Essential services status</li>
-          <li>Basic security check (firewall, open ports, user accounts)</li>
+          <li>Review of current firewall status, listening ports and user-account configuration</li>
         </ul>
         <p><strong>Boundary:</strong> Cleanup actions require explicit customer approval.</p>
-        <p><strong>Outcome:</strong> A report on actions taken, findings, and recommendations for ongoing maintenance.</p>
+        <p><strong>Outcome:</strong> A plain-English summary of findings, approved actions completed and recommended next steps.</p>
       </article>
 
       <!-- Docker Problem Diagnosis -->
@@ -68,7 +75,7 @@ import Layout from '../../layouts/default.astro';
           <li>Docker configuration and version check</li>
         </ul>
         <p><strong>Boundary:</strong> Fixes are excluded unless a trivial reversible change is approved.</p>
-        <p><strong>Outcome:</strong> A diagnosis of the Docker‑related problem, steps to reproduce, and recommended solution or workaround.</p>
+        <p><strong>Outcome:</strong> A summary of the checks completed, evidence found, the likely cause where identifiable, and recommended next steps.</p>
       </article>
 
       <!-- NAS, Storage and Backup Health Review -->
@@ -81,11 +88,12 @@ import Layout from '../../layouts/default.astro';
           <li>Storage system logs (if accessible, read‑only)</li>
           <li>Disk health (SMART status per disk)</li>
           <li>RAID or storage pool status and consistency</li>
-          <li>Filesystem errors (non‑destructive checks if safe)</li>
           <li>Shared folders, permissions, and access controls</li>
+          <li>Backup job configuration and last‑run status</li>
+          <li>Backup destination accessibility and reported free space</li>
         </ul>
         <p><strong>Boundary:</strong> No filesystem repair, RAID rebuild, or test restoration.</p>
-        <p><strong>Outcome:</strong> A report on the health of the storage system, backup configuration, and recommendations for improving data safety.</p>
+        <p><strong>Outcome:</strong> A plain-English summary of the checks completed, observed storage and backup indicators, risks identified and recommended next steps.</p>
       </article>
 
       <!-- Hardware and Performance Diagnosis -->
@@ -97,12 +105,13 @@ import Layout from '../../layouts/default.astro';
         <ul>
           <li>System logs for hardware errors (Event Viewer, dmesg, journalctl)</li>
           <li>CPU and temperature readings (if sensors available)</li>
-          <li>Memory (RAM) quick error check (if safe)</li>
-          <li>Disk health (SMART status, short bad‑sector scan if agreed)</li>
+          <li>Existing SMART health information</li>
+          <li>Current resource and memory usage</li>
           <li>Device manager (Windows) or lspci/lsusb (Linux) for missing drivers</li>
+          <li>A short, low-risk performance observation where appropriate</li>
         </ul>
         <p><strong>Boundary:</strong> No physical disassembly, hardware repair, or component replacement.</p>
-        <p><strong>Outcome:</strong> A diagnosis of likely hardware cause(s), recommendations for testing or replacement, and fixed price for agreed follow‑up work.</p>
+        <p><strong>Outcome:</strong> A summary of the checks completed, likely causes where identifiable, and recommended testing or replacement options.</p>
       </article>
 
       <!-- Home or Small-Office Network Diagnosis -->
@@ -117,10 +126,10 @@ import Layout from '../../layouts/default.astro';
           <li>Connectivity to the router (ping, DNS resolution)</li>
           <li>Wi‑Fi scan for channel overlap and signal strength (if wireless device available)</li>
           <li>IP address assignment (DHCP) and DNS settings on a test device</li>
-          <li>Basic router settings (WAN/LAN, Wi‑Fi SSID/password, DHCP range, port forwarding)</li>
+          <li>Review of relevant WAN, LAN, DHCP, DNS, Wi‑Fi security and port‑forwarding configuration without recording credentials</li>
         </ul>
         <p><strong>Boundary:</strong> No changes to WAN, LAN, DHCP, DNS, Wi‑Fi, firewall, or port‑forwarding unless a small reversible change is explicitly approved.</p>
-        <p><strong>Outcome:</strong> A diagnosis of likely network issue(s), recommendations for improving connectivity or security, and fixed price for agreed follow‑up work.</p>
+        <p><strong>Outcome:</strong> A summary of the checks completed, likely causes where identifiable, and recommended connectivity or security improvements.</p>
       </article>
     </section>
 
