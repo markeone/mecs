@@ -2,41 +2,116 @@
 import Layout from '../layouts/default.astro';
 
 // Page metadata
-const title = 'Home | MECS';
-const description = 'Practical IT help. Clear fixed prices.';
+const title = 'MECS | Practical IT help with clear fixed prices';
+const description = 'Remote-first IT support for home users, sole traders and small businesses, with clear scopes and fixed prices.';
 ---
 
 <Layout title={title} description={description}>
   <main>
+    <!-- Hero section -->
     <section class="hero">
-      <h1>ME Computer Services</h1>
+      <h1>Straightforward IT help without the runaround.</h1>
+      <p>
+        MECS provides remote-first support for computers, Linux systems, Docker, storage, hardware and small networks.
+        You deal directly with one experienced engineer from enquiry to completion.
+      </p>
       <p class="tagline">Practical IT help. Clear fixed prices.</p>
-      <a href="/services" class="cta-button">View Our Services</a>
-    </section>
-    
-    <section class="services-preview">
-      <h2>Our Core Services</h2>
-      <div class="services-list">
-        <div class="service-item">
-          <h3>IT Support</h3>
-          <p>On-site and remote support for businesses and homes.</p>
-          <a href="/services#it-support">Learn more →</a>
-        </div>
-        <div class="service-item">
-          <h3>Network Setup</h3>
-          <p>Design, install, and configure reliable networks          <a href="/services#network-setup">Learn more →</a>
-        </div>
-        <div class="service-item">
-          <h3>Data Backup</h3>
-          <p>Secure backup solutions to protect your data          <a href="/services#data-backup">Learn more →</a>
-        </div>
+      <div class="hero-actions">
+        <a href="/services/" class="cta-button primary">View fixed-price services</a>
+        <a href="/contact/" class="cta-button secondary">Check whether your job is suitable</a>
       </div>
     </section>
 
-    <section class="about-preview">
-      <h2>About MECS</h2>
-      <p>ME Computer Services provides practical IT solutions with transparent, fixed pricing. We focus on solving your technology problems without jargon or surprise costs.</p>
-      <a href="/about" class="cta-button">Learn About Us</a>
+    <!-- Compact service overview -->
+    <section class="service-overview">
+      <h2>Our fixed-price services</h2>
+      <div class="services-grid">
+        <!-- Computer Health Check -->
+        <article class="service-card">
+          <h3>Computer Health Check</h3>
+          <p><strong>Price:</strong> £55 — up to 1 hour</p>
+          <p>General checkup for Windows or Linux computers.</p>
+        </article>
+        <!-- Linux Cleanup and Troubleshooting -->
+        <article class="service-card">
+          <h3>Linux Cleanup and Troubleshooting</h3>
+          <p><strong>Price:</strong> £85 — up to 1.5 hours</p>
+          <p>Cleanup and checks for Linux desktops or servers.</p>
+        </article>
+        <!-- Docker Problem Diagnosis -->
+        <article class="service-card">
+          <h3>Docker Problem Diagnosis</h3>
+          <p><strong>Price:</strong> £55 — up to 1 hour</p>
+          <p>Diagnosis of Docker container or daemon issues.</p>
+        </article>
+        <!-- NAS and Backup Health Review -->
+        <article class="service-card">
+          <h3>NAS and Backup Health Review</h3>
+          <p><strong>Price:</strong> £85 — up to 1.5 hours</p>
+          <p>Health check of NAS/storage devices and backup configuration.</p>
+        </article>
+        <!-- Hardware and Performance Diagnosis -->
+        <article class="service-card">
+          <h3>Hardware and Performance Diagnosis</h3>
+          <p><strong>Price:</strong> £55 — up to 1 hour</p>
+          <p>Diagnosis of slow performance, crashes or hardware‑related issues.</p>
+        </article>
+        <!-- Home or Small-Office Network Diagnosis -->
+        <article class="service-card">
+          <h3>Home or Small-Office Network Diagnosis</h3>
+          <p><strong>Price:</strong> £55 — up to 1 hour</p>
+          <p>Diagnosis of internet, Wi‑Fi or device connectivity problems.</p>
+        </article>
+      </div>
+      <p class="see-more">
+        <a href="/services/">See full scope, time allowances and service boundaries</a>
+      </p>
+    </section>
+
+    <!-- Why choose MECS -->
+    <section class="why-choose">
+      <h2>Why choose MECS</h2>
+      <ul class="benefits-list">
+        <li>
+          <strong>Direct support</strong><br>
+          Deal directly with the engineer doing the work.
+        </li>
+        <li>
+          <strong>Clear boundaries</strong><br>
+          Know the agreed scope, time allowance and price before work begins.
+        </li>
+        <li>
+          <strong>Customer control</strong><br>
+          You remain present during remote access and approve any system‑changing action.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Simple process -->
+    <section class="simple-process">
+      <h2>How it works</h2>
+      <ol class="process-steps">
+        <li>Describe the problem.</li>
+        <li>MECS confirms whether it is suitable and agrees the scope.</li>
+        <li>Attend the remote session and receive a plain‑English summary.</li>
+      </ol>
+    </section>
+
+    <!-- Availability boundary -->
+    <section class="availability">
+      <p>
+        Support is provided remotely by appointment. MECS does not offer emergency, 24/7 or guaranteed‑response support.
+        Local visits may be considered case by case.
+      </p>
+    </section>
+
+    <!-- Closing CTA -->
+    <section class="closing-cta">
+      <h2>Not sure which service fits?</h2>
+      <p>
+        Describe what is happening and MECS will check whether it falls within one of the fixed‑price packages.
+      </p>
+      <a href="/contact/" class="cta-button">Check your job</a>
     </section>
   </main>
 </Layout>
