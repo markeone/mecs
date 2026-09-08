@@ -3,7 +3,7 @@ import Layout from '../../layouts/default.astro';
 ---
 
 <Layout title="Services | MECS" description="Practical IT services with clear fixed prices.">
-  <main>
+  <main id="main-content">
     <section class="hero">
       <h1>Our Services</h1>
       <p class="tagline">Practical IT help. Clear fixed prices.</p>
@@ -33,6 +33,10 @@ import Layout from '../../layouts/default.astro';
         <h2>Windows or Linux Computer Health Check</h2>
         <p><strong>Price:</strong> £55 — up to 1 hour</p>
         <p><strong>Suitable for:</strong> Home users, sole traders, small businesses needing a general checkup.</p>
+        <p><strong>Outcome:</strong> A plain-English summary of the checks completed, observed health indicators and recommended next steps.</p>
+        <p><strong>Boundary:</strong> No repair or fix work is performed.</p>
+        <details>
+          <summary>See included checks</summary>
         <h3>Included checks</h3>
         <ul>
           <li>OS version and update status</li>
@@ -41,8 +45,8 @@ import Layout from '../../layouts/default.astro';
           <li>Memory usage and operating-system-reported memory errors</li>
           <li>Startup programs and services review</li>
         </ul>
-        <p><strong>Boundary:</strong> No repair or fix work is performed.</p>
-        <p><strong>Outcome:</strong> A plain-English summary of the checks completed, observed health indicators and recommended next steps.</p>
+        </details>
+
       </article>
 
       <!-- Linux Cleanup and Troubleshooting -->
@@ -50,15 +54,19 @@ import Layout from '../../layouts/default.astro';
         <h2>Linux Cleanup and Troubleshooting</h2>
         <p><strong>Price:</strong> £85 — up to 1.5 hours</p>
         <p><strong>Suitable for:</strong> Linux desktop or server users experiencing slow performance or service failures.</p>
+        <p><strong>Outcome:</strong> A plain-English summary of findings, approved actions completed and recommended next steps.</p>
+        <p><strong>Boundary:</strong> Cleanup actions require written customer approval. Logs, customer data and unknown or application files are excluded.</p>
+        <details>
+          <summary>See included checks</summary>
         <h3>Included checks</h3>
         <ul>
           <li>System logs (journalctl, /var/log) for errors</li>
           <li>Running processes and resource usage</li>
-          <li>Disk usage and cleanup of temporary files (agreed)</li>
+          <li>Disk usage and agreed cleanup of package caches and clearly identified temporary files</li>
           <li>Review of current firewall status, listening ports and user-account configuration</li>
         </ul>
-        <p><strong>Boundary:</strong> Cleanup actions require explicit customer approval.</p>
-        <p><strong>Outcome:</strong> A plain-English summary of findings, approved actions completed and recommended next steps.</p>
+        </details>
+
       </article>
 
       <!-- Docker Problem Diagnosis -->
@@ -66,6 +74,10 @@ import Layout from '../../layouts/default.astro';
         <h2>Docker Problem Diagnosis</h2>
         <p><strong>Price:</strong> £55 — up to 1 hour</p>
         <p><strong>Suitable for:</strong> Users running Docker containers facing startup, image, or daemon issues.</p>
+        <p><strong>Outcome:</strong> A summary of the checks completed, evidence found, the likely cause where identifiable, and recommended next steps.</p>
+        <p><strong>Boundary:</strong> Fixes are excluded unless a trivial reversible change is approved.</p>
+        <details>
+          <summary>See included checks</summary>
         <h3>Included checks</h3>
         <ul>
           <li>Docker daemon logs (read‑only)</li>
@@ -74,8 +86,8 @@ import Layout from '../../layouts/default.astro';
           <li>Attempt to reproduce the issue</li>
           <li>Docker configuration and version check</li>
         </ul>
-        <p><strong>Boundary:</strong> Fixes are excluded unless a trivial reversible change is approved.</p>
-        <p><strong>Outcome:</strong> A summary of the checks completed, evidence found, the likely cause where identifiable, and recommended next steps.</p>
+        </details>
+
       </article>
 
       <!-- NAS, Storage and Backup Health Review -->
@@ -83,6 +95,10 @@ import Layout from '../../layouts/default.astro';
         <h2>NAS, Storage and Backup Health Review</h2>
         <p><strong>Price:</strong> £85 — up to 1.5 hours</p>
         <p><strong>Suitable for:</strong> Users of NAS devices, external storage, or backup solutions wanting a health check.</p>
+        <p><strong>Outcome:</strong> A plain-English summary of the checks completed, observed storage and backup indicators, risks identified and recommended next steps.</p>
+        <p><strong>Boundary:</strong> One NAS/storage system with up to four installed disks, or up to four external drives by agreement. No filesystem repair, RAID rebuild, scrub, firmware update, or test restoration.</p>
+        <details>
+          <summary>See included checks</summary>
         <h3>Included checks</h3>
         <ul>
           <li>Storage system logs (if accessible, read‑only)</li>
@@ -92,8 +108,8 @@ import Layout from '../../layouts/default.astro';
           <li>Backup job configuration and last‑run status</li>
           <li>Backup destination accessibility and reported free space</li>
         </ul>
-        <p><strong>Boundary:</strong> No filesystem repair, RAID rebuild, or test restoration.</p>
-        <p><strong>Outcome:</strong> A plain-English summary of the checks completed, observed storage and backup indicators, risks identified and recommended next steps.</p>
+        </details>
+
       </article>
 
       <!-- Hardware and Performance Diagnosis -->
@@ -101,6 +117,10 @@ import Layout from '../../layouts/default.astro';
         <h2>Hardware and Performance Diagnosis</h2>
         <p><strong>Price:</strong> £55 — up to 1 hour</p>
         <p><strong>Suitable for:</strong> Users experiencing slow performance, crashes, or hardware‑related issues.</p>
+        <p><strong>Outcome:</strong> A summary of the checks completed, likely causes where identifiable, and recommended testing or replacement options.</p>
+        <p><strong>Boundary:</strong> No physical disassembly, hardware repair, or component replacement.</p>
+        <details>
+          <summary>See included checks</summary>
         <h3>Included checks</h3>
         <ul>
           <li>System logs for hardware errors (Event Viewer, dmesg, journalctl)</li>
@@ -110,8 +130,8 @@ import Layout from '../../layouts/default.astro';
           <li>Device manager (Windows) or lspci/lsusb (Linux) for missing drivers</li>
           <li>A short, low-risk performance observation where appropriate</li>
         </ul>
-        <p><strong>Boundary:</strong> No physical disassembly, hardware repair, or component replacement.</p>
-        <p><strong>Outcome:</strong> A summary of the checks completed, likely causes where identifiable, and recommended testing or replacement options.</p>
+        </details>
+
       </article>
 
       <!-- Home or Small-Office Network Diagnosis -->
@@ -119,6 +139,10 @@ import Layout from '../../layouts/default.astro';
         <h2>Home or Small-Office Network Diagnosis</h2>
         <p><strong>Price:</strong> £55 — up to 1 hour</p>
         <p><strong>Suitable for:</strong> Users with internet connectivity, Wi‑Fi, or device connectivity issues.</p>
+        <p><strong>Outcome:</strong> A summary of the checks completed, likely causes where identifiable, and recommended connectivity or security improvements.</p>
+        <p><strong>Boundary:</strong> No changes to WAN, LAN, DHCP, DNS, Wi‑Fi, firewall, or port‑forwarding unless a small reversible change is explicitly approved.</p>
+        <details>
+          <summary>See included checks</summary>
         <h3>Included checks</h3>
         <ul>
           <li>Public IP address and internet connectivity from the router</li>
@@ -128,8 +152,8 @@ import Layout from '../../layouts/default.astro';
           <li>IP address assignment (DHCP) and DNS settings on a test device</li>
           <li>Review of relevant WAN, LAN, DHCP, DNS, Wi‑Fi security and port‑forwarding configuration without recording credentials</li>
         </ul>
-        <p><strong>Boundary:</strong> No changes to WAN, LAN, DHCP, DNS, Wi‑Fi, firewall, or port‑forwarding unless a small reversible change is explicitly approved.</p>
-        <p><strong>Outcome:</strong> A summary of the checks completed, likely causes where identifiable, and recommended connectivity or security improvements.</p>
+        </details>
+
       </article>
     </section>
 
@@ -152,7 +176,7 @@ import Layout from '../../layouts/default.astro';
         <li>The customer enters passwords themselves.</li>
         <li>MECS does not ask customers to send passwords.</li>
         <li>Important data should be backed up before approved changes.</li>
-        <li>No change is made without agreement.</li>
+        <li>System-changing actions require your written approval.</li>
         <li>Remote access is removed or closed after the session.</li>
       </ul>
     </section>
