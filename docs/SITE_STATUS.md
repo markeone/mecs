@@ -6,6 +6,8 @@ Updated 8 September 2026. The website remains undeployed. This document and the 
 
 - Six routes: Home, Services, About, Contact, Privacy and Service Terms.
 - Responsive service and values grids, shared CTA buttons, visible link/focus states, simplified primary navigation and a skip link.
+- Calm technical visual direction using navy, professional blue and a restrained cyan accent. The homepage includes a blue technical-grid hero, compact service identifiers, prominent price labels and numbered process steps.
+- Calm technical visual direction using navy, professional blue and a restrained cyan accent. The homepage includes a blue technical-grid hero, compact service identifiers, prominent price labels and numbered process steps.
 - One page-level H1 per page; the wordmark links home.
 - Page-specific titles/descriptions through Astro.props, Open Graph metadata and a supplied SVG favicon.
 - Optional SITE_URL configuration supplies canonical and Open Graph URLs without a placeholder domain.
