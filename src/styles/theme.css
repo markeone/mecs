@@ -30,8 +30,9 @@ main { min-height: 65vh; }
 .header { background: rgba(255, 255, 255, 0.96); border-bottom: 1px solid var(--border); padding: 1.1rem 1.5rem; }
 .header nav { align-items: center; display: flex; gap: 2rem; justify-content: space-between; margin: auto; max-width: 1168px; }
 .wordmark { align-items: center; color: var(--navy); display: flex; flex-shrink: 0; gap: 0.8rem; text-decoration: none; }
-.wordmark-icon { align-items: center; background: var(--navy); border-radius: 0.55rem; box-shadow: inset 0 -3px 0 rgba(44, 177, 188, 0.5); color: white; display: flex; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 1rem; font-weight: 800; height: 3rem; justify-content: center; letter-spacing: -0.08em; width: 3.35rem; }
-.wordmark-icon span { color: var(--cyan); margin-left: 0.08rem; }
+.wordmark-icon { align-items: center; background: var(--navy); border-radius: 0.7rem; box-shadow: 0 7px 16px rgba(16, 42, 67, 0.16); color: white; display: flex; height: 3rem; justify-content: center; overflow: hidden; position: relative; width: 3.35rem; }
+.wordmark-monogram { font-size: 1.05rem; font-weight: 800; letter-spacing: -0.045em; margin-left: 0.28rem; }
+.wordmark-accent { background: var(--cyan); bottom: 0; left: 0; position: absolute; top: 0; width: 0.32rem; }
 .wordmark-text { display: flex; flex-direction: column; }
 .wordmark-primary { font-size: 1.45rem; font-weight: 780; line-height: 1.15; }
 .wordmark-tagline { color: var(--muted); font-size: 0.875rem; margin: 0; }
@@ -70,6 +71,19 @@ section { margin: 0 auto; max-width: 1200px; padding: 3.5rem 1.5rem; }
 .service-price span { color: var(--muted); font-size: 0.9rem; font-weight: 650; }
 .see-more { margin: 1.8rem 0 0; }
 .see-more a { font-weight: 700; }
+
+.microsoft-support { display: grid; gap: 2.5rem; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.5fr); padding-bottom: 4.5rem; padding-top: 4.5rem; }
+.platform-heading h2 { margin-bottom: 1rem; }
+.platform-heading > p:last-child { color: var(--muted); margin-bottom: 0; }
+.eyebrow { color: var(--accent); font-size: 0.82rem; font-weight: 800; letter-spacing: 0.12em; margin-bottom: 0.7rem; text-transform: uppercase; }
+.platform-grid { display: grid; gap: 1px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.platform-grid article { background: var(--navy); color: #d9eaf7; min-height: 13rem; padding: 1.5rem; }
+.platform-grid article:first-child { border-radius: 0.7rem 0 0 0.7rem; }
+.platform-grid article:last-child { border-radius: 0 0.7rem 0.7rem 0; }
+.platform-grid article > span { color: var(--cyan); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.08em; }
+.platform-grid h3 { color: white; margin-top: 1.7rem; }
+.platform-grid p { font-size: 0.94rem; margin-bottom: 0; }
+.platform-note { color: var(--muted); font-size: 0.9rem; grid-column: 2; margin: -1.5rem 0 0; }
 
 .why-choose { background: var(--blue-soft); max-width: none; padding-left: max(1.5rem, calc((100% - 1152px) / 2)); padding-right: max(1.5rem, calc((100% - 1152px) / 2)); }
 .benefits-list { display: grid; gap: 2rem; grid-template-columns: repeat(3, minmax(0, 1fr)); list-style: none; padding: 0; }
@@ -120,6 +134,8 @@ section { margin: 0 auto; max-width: 1200px; padding: 3.5rem 1.5rem; }
   .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hero { padding-bottom: 4.5rem; padding-top: 4.5rem; }
   .service-item { padding: 1.4rem; }
+  .microsoft-support { grid-template-columns: 1fr; }
+  .platform-note { grid-column: 1; }
 }
 
 @media (max-width: 560px) {
@@ -131,4 +147,8 @@ section { margin: 0 auto; max-width: 1200px; padding: 3.5rem 1.5rem; }
   .header li a { font-size: 0.95rem; }
   .closing-cta { border-radius: 0; }
   .service-card { padding: 1.25rem; }
+  .platform-grid { grid-template-columns: 1fr; }
+  .platform-grid article { min-height: auto; }
+  .platform-grid article:first-child { border-radius: 0.7rem 0.7rem 0 0; }
+  .platform-grid article:last-child { border-radius: 0 0 0.7rem 0.7rem; }
 }
