@@ -8,6 +8,7 @@ Updated 8 September 2026. The website remains undeployed. This document and the 
 - Responsive service and values grids, shared CTA buttons, visible link/focus states, simplified primary navigation and a skip link.
 - Calm technical visual direction using navy, professional blue and a restrained cyan accent. The homepage includes a blue technical-grid hero, compact service identifiers, prominent price labels and numbered process steps.
 - Microsoft platform experience is presented from Windows desktop through Windows Server, Hyper-V, Group Policy, Intune and Azure virtual machines/storage. Larger migrations, deployments and ongoing management remain separately scoped.
+- A multi-stage, multi-architecture Docker build packages the static site behind Nginx. Compose defaults to host port 8080 and includes a read-only runtime, health check and restart policy for eventual NAS deployment.
 - Calm technical visual direction using navy, professional blue and a restrained cyan accent. The homepage includes a blue technical-grid hero, compact service identifiers, prominent price labels and numbered process steps.
 - One page-level H1 per page; the wordmark links home.
 - Page-specific titles/descriptions through Astro.props, Open Graph metadata and a supplied SVG favicon.
@@ -24,6 +25,7 @@ Updated 8 September 2026. The website remains undeployed. This document and the 
 - Generated HTML checked for unique populated titles, meta descriptions, one H1 per page, skip-link targets and resolvable local links/assets.
 - Checked six service disclosures, visible package boundaries and exactly one mailto action.
 - Local homepage returned HTTP 200.
+- Docker image build and read-only runtime verified on rig1. The container reached healthy status; `/`, `/services/`, `/about/`, `/contact/` and `/favicon.svg` returned 200, while an unknown path returned 404. A test `SITE_URL` produced the expected canonical URLs.
 - Configured-domain build checked for canonical and Open Graph URLs on all six routes; local build omits those URLs when SITE_URL is absent.
 - No browser interaction, screenshot, mobile viewport or live email-delivery testing was performed.
 

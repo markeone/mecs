@@ -1,0 +1,18 @@
+services:
+  mecs:
+    build:
+      context: .
+      args:
+        SITE_URL: ${SITE_URL:-}
+    image: mecs-website:latest
+    container_name: mecs-website
+    ports:
+      - "${MECS_PORT:-8080}:80"
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /var/cache/nginx
+      - /var/run
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
