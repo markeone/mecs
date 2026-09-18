@@ -1,5 +1,7 @@
 # MECS Launch Scope Document
 
+Updated 8 September 2026. Current operational scope; see [site status](SITE_STATUS.md) for implementation and unresolved launch decisions. Package prices are £55 for one-hour packages and £85 for the two 1.5-hour packages. Additional remote time is £27.50 per 30 minutes by prior agreement. No VAT is added. This document is not the customer service contract.
+
 ## Business Identity
 - **Primary Name**: MECS
 - **Full Name**: ME Computer Services
@@ -45,7 +47,7 @@ Distinguish clearly between:
 - disruptive or destructive work that is excluded.
 Do not make an absolute legal claim that MECS can never be liable. This document is operational scope, not final legal advice.
 
-## Proposed Launch Packages
+## Launch Packages
 
 ### 1. Windows or Linux Computer Health Check
 - Primarily read-only.
@@ -53,15 +55,15 @@ Do not make an absolute legal claim that MECS can never be liable. This document
 - Do not include a full memory test within the one-hour remote package.
 - Promise findings and recommendations, not improved performance.
 
-**Intended Customer**: Home users, sole traders, small businesses with a single computer needing a checkup.  
-**Typical Problems Covered**: Slow performance, software updates status, antivirus check, basic hardware health (disk, memory), common error logs.  
-**Defined Customer Outcome**: A report detailing the current health of the computer, recommendations for improvements, and a fixed price for any agreed follow-up work.  
+**Intended Customer**: Home users, sole traders, small businesses with a single computer needing a checkup.
+**Typical Problems Covered**: Slow performance, software updates status, antivirus check, basic hardware health (disk, memory), common error logs.
+**Defined Customer Outcome**: A report detailing the current health of the computer, recommendations for improvements, and a fixed price for any agreed follow-up work.
 **What is Included**:
 - Remote connection to the computer (with customer permission via attended session; customer enters any required credentials).
 - Check of operating system version and update status.
 - Antivirus/anti-malware status check.
 - Disk health check (SMART status, free space) – read-only.
-- Memory (RAM) test for errors – limited to a quick, non‑destructive check if available and safe; otherwise omitted.
+- Review of current memory usage and operating-system-reported memory errors; no active memory test.
 - Review of startup programs and services.
 - Basic event log review for critical errors (read-only, limited to recent/system logs).
 - A written report with findings and recommendations.
@@ -73,8 +75,8 @@ Do not make an absolute legal claim that MECS can never be liable. This document
 - Network or connectivity issues beyond the local machine.
 - Operating system reinstallation.
 - Running destructive disk tests, extended memory tests, or stress tests.
-**Number of Devices Included**: 1 computer (desktop or laptop).  
-**Recommended Time Allowance**: 1 hour.  
+**Number of Devices Included**: 1 computer (desktop or laptop).
+**Recommended Time Allowance**: 1 hour.
 **Information or Access Required from the Customer**:
 - Remote access permission (customer must attend and grant control; MECS does not request or retain passwords).
 - Details of any specific concerns.
@@ -82,8 +84,8 @@ Do not make an absolute legal claim that MECS can never be liable. This document
 - Computer cannot be powered on or booted to the operating system.
 - Lack of internet connection for remote access.
 - Customer unwilling to provide necessary access or attend the session.
-**How Additional Work Should Be Handled**: Any work outside the health check (e.g., virus removal, performance tuning) will be quoted separately after the health check.  
-**Can be Delivered Remotely**: Yes.  
+**How Additional Work Should Be Handled**: Any work outside the health check (e.g., virus removal, performance tuning) will be quoted separately after the health check.
+**Can be Delivered Remotely**: Yes.
 **Risks Requiring Explicit Customer Acknowledgement**:
 - The health check is diagnostic only and does not guarantee the identification of all issues.
 - Some hardware tests (like stress tests) may not be performed to avoid risk to an unstable system.
@@ -97,9 +99,9 @@ Do not make an absolute legal claim that MECS can never be liable. This document
 - Do not promise a cleaner or better‑performing system.
 - Do not request that the customer disclose a root or sudo password.
 
-**Intended Customer**: Home users, sole traders, small businesses using Linux desktops or servers experiencing issues.  
-**Typical Problems Covered**: Slow performance, high resource usage, service failures, log errors, basic security checks.  
-**Defined Customer Outcome**: A report on actions taken with customer approval, findings, and recommendations for ongoing maintenance.  
+**Intended Customer**: Home users, sole traders, small businesses using Linux desktops or servers experiencing issues.
+**Typical Problems Covered**: Slow performance, high resource usage, service failures, log errors, basic security checks.
+**Defined Customer Outcome**: A report on actions taken with customer approval, findings, and recommendations for ongoing maintenance.
 **What is Included**:
 - Remote connection to the Linux system (with customer permission via attended session; customer enters any required credentials).
 - Check of system logs (journalctl, /var/log) for errors – read‑only, limited to recent entries.
@@ -119,8 +121,8 @@ Do not make an absolute legal claim that MECS can never be liable. This document
 - Proprietary driver installation or troubleshooting.
 - Deletion of logs, customer data, unknown files, or application data.
 - Running destructive disk tests or extended memory tests.
-**Number of Devices Included**: 1 Linux system (desktop or server).  
-**Recommended Time Allowance**: 1.5 hours.  
+**Number of Devices Included**: 1 Linux system (desktop or server).
+**Recommended Time Allowance**: 1.5 hours.
 **Information or Access Required from the Customer**:
 - Remote access permission (customer must attend and grant control; MECS does not request or retain passwords; customer may create a temporary restricted account if desired).
 - Details of any specific issues or goals.
@@ -129,8 +131,8 @@ Do not make an absolute legal claim that MECS can never be liable. This document
 - Lack of network connectivity.
 - Customer unwilling to provide necessary access or attend the session.
 - System is in a state where running commands could cause further issues (e.g., severely corrupted filesystem).
-**How Additional Work Should Be Handled**: Any work outside the cleanup and troubleshooting scope (e.g., data recovery, major configuration changes, security incident response) will be quoted separately.  
-**Can be Delivered Remotely**: Yes.  
+**How Additional Work Should Be Handled**: Any work outside the cleanup and troubleshooting scope (e.g., data recovery, major configuration changes, security incident response) will be quoted separately.
+**Can be Delivered Remotely**: Yes.
 **Risks Requiring Explicit Customer Acknowledgement**:
 - Performing updates or making changes carries a risk of breaking the system, especially if it is already unstable.
 - The customer acknowledges that they are responsible for backing up critical data before any work begins.
@@ -142,9 +144,9 @@ Do not make an absolute legal claim that MECS can never be liable. This document
 - Default package is diagnosis only, apart from an explicitly approved trivial reversible change.
 - Never expose or grant Hermes/MECS unrestricted Docker socket access outside the agreed customer session.
 
-**Intended Customer**: Developers, small businesses, or individuals running Docker containers who are experiencing issues with containers, images, or the Docker daemon.  
-**Typical Problems Covered**: Containers failing to start, image build failures, network issues between containers, volume mount problems, performance issues, Docker daemon errors.  
-**Defined Customer Outcome**: A diagnosis of the Docker‑related problem, steps to reproduce, and a recommended solution or workaround.  
+**Intended Customer**: Developers, small businesses, or individuals running Docker containers who are experiencing issues with containers, images, or the Docker daemon.
+**Typical Problems Covered**: Containers failing to start, image build failures, network issues between containers, volume mount problems, performance issues, Docker daemon errors.
+**Defined Customer Outcome**: A summary of checks completed, evidence found, the likely cause where identifiable, and recommended next steps.
 **What is Included**:
 - Remote connection to the host system running Docker (with customer permission via attended session; customer enters any required credentials).
 - Review of Docker daemon logs (journalctl or /var/log/docker.log) – read‑only, limited to recent entries.
@@ -164,8 +166,8 @@ Do not make an absolute legal claim that MECS can never be liable. This document
 - Production environment optimization or scaling advice.
 - Container restarts, recreation, image removal, volume changes, pruning, and Compose changes (unless separately scoped and approved).
 - Exposure of secrets, tokens, passwords, private keys, or full environment‑variable values in reports.
-**Number of Devices Included**: 1 host system running Docker.  
-**Recommended Time Allowance**: 1 hour.  
+**Number of Devices Included**: 1 host system running Docker.
+**Recommended Time Allowance**: 1 hour.
 **Information or Access Required from the Customer**:
 - Remote access permission (customer must attend and grant control; MECS does not request or retain passwords; customer may create a temporary restricted account if desired).
 - Details of the specific problem, including steps to reproduce if known.
@@ -175,10 +177,10 @@ Do not make an absolute legal claim that MECS can never be liable. This document
 - Lack of necessary permissions to inspect Docker objects.
 - The problem is intermittent and cannot be reproduced during the session.
 - The issue requires access to proprietary code or data that the customer cannot share.
-**How Additional Work Should Be Handled**: Any work to implement fixes, rebuild images, or modify configurations beyond diagnosis will be quoted separately.  
-**Can be Delivered Remotely**: Yes.  
+**How Additional Work Should Be Handled**: Any work to implement fixes, rebuild images, or modify configurations beyond diagnosis will be quoted separately.
+**Can be Delivered Remotely**: Yes.
 **Risks Requiring Explicit Customer Acknowledgement**:
-- Diagnostic commands may alter the state of containers (e.g., restarting them) which could cause temporary service disruption.
+- Default diagnosis is read-only. Container restarts and other state-changing work are excluded unless separately scoped and approved.
 - The customer acknowledges that they are responsible for backing up any critical data in container volumes.
 - The engineer is not liable for any data loss or service disruption resulting from diagnostic actions, unless due to negligence.
 
@@ -190,15 +192,15 @@ Do not make an absolute legal claim that MECS can never be liable. This document
 - If degraded storage or evidence of disk failure is discovered, stop risky testing and report it.
 - Promise a health/configuration review, not certification that backups or disks are reliable.
 
-**Intended Customer**: Home users, sole traders, small businesses using NAS devices, external storage, or backup solutions who want to verify the health and configuration of their storage.  
-**Typical Problems Covered**: Disk health, RAID status, backup job failures, storage capacity, network connectivity to storage, basic security settings.  
-**Defined Customer Outcome**: A report on the health of the storage system, backup configuration, and recommendations for improving data safety.  
+**Intended Customer**: Home users, sole traders, small businesses using NAS devices, external storage, or backup solutions who want to verify the health and configuration of their storage.
+**Typical Problems Covered**: Disk health, RAID status, backup job failures, storage capacity, network connectivity to storage, basic security settings.
+**Defined Customer Outcome**: A report on the health of the storage system, backup configuration, and recommendations for improving data safety.
 **What is Included**:
 - Remote connection to the NAS/storage device or a computer connected to it (with customer permission via attended session; customer enters any required credentials).
 - Check of storage system logs (if accessible) – read‑only, limited to recent entries.
 - Review of disk health (SMART status for each disk) – read‑only.
 - Review of RAID or storage pool status and consistency – read‑only.
-- Check of filesystem errors (if accessible and safe to run) – limited to non‑destructive checks.
+- Review existing filesystem error reports when accessible; do not initiate filesystem scans or repairs.
 - Review of shared folders, permissions, and access controls.
 - Check of backup job configuration and last‑run status.
 - Verification of backup destination accessibility and space.
@@ -215,8 +217,8 @@ Do not make an absolute legal claim that MECS can never be liable. This document
 - Secure data erasure or disposal.
 - Running filesystem repair, RAID rebuild, scrub, disk replacement, firmware updates, or storage‑pool changes.
 - Test restoration from a backup (offered only as separately scoped work).
-**Number of Devices Included**: 1 NAS device or storage system (including its disks). For USB/external drives, up to 4 drives can be checked in one session.  
-**Recommended Time Allowance**: 1.5 hours.  
+**Number of Devices Included**: 1 NAS/storage system, with up to 4 installed disks reviewed. A group of up to 4 USB/external drives may be agreed instead.
+**Recommended Time Allowance**: 1.5 hours.
 **Information or Access Required from the Customer**:
 - Remote access permission to the NAS admin interface (or to a connected computer) – customer must attend and grant control; MECS does not request or retain passwords; customer may create a temporary restricted account if desired.
 - Administrator password for the NAS/storage device – customer enters it themselves during the attended session.
@@ -226,11 +228,11 @@ Do not make an absolute legal claim that MECS can never be liable. This document
 - NAS device is not powered on or not accessible on the network.
 - Lack of necessary permissions to access admin interface or disks.
 - The storage system is in a degraded state where running checks could cause further damage (e.g., failing disk in RAID 0).
-- Customer unwilling to provide credentials or attend the session.
-**How Additional Work Should Be Handled**: Any work to replace disks, reconfigure storage, recover data, or modify backup systems beyond the health review will be quoted separately.  
-**Can be Delivered Remotely**: Yes (if the NAS/admin interface is accessible remotely; otherwise, local visit by prior arrangement).  
+- Customer unable to grant approved access or attend the session; credentials are entered by the customer.
+**How Additional Work Should Be Handled**: Any work to replace disks, reconfigure storage, recover data, or modify backup systems beyond the health review will be quoted separately.
+**Can be Delivered Remotely**: Yes (if the NAS/admin interface is accessible remotely; otherwise, local visit by prior arrangement).
 **Risks Requiring Explicit Customer Acknowledgement**:
-- Running storage checks (like SMART tests or filesystem checks) on a failing disk could potentially worsen its condition or lead to data loss.
+- Failing storage may deteriorate during use. Read existing indicators only and stop risky investigation when failure is suspected; do not initiate SMART tests, scrubs or repairs.
 - The customer acknowledges that they are responsible for having an independent backup of critical data before any work begins.
 - The engineer is not liable for any data loss resulting from the health review, unless due to negligence.
 
@@ -241,17 +243,17 @@ Do not make an absolute legal claim that MECS can never be liable. This document
 - Physical inspection or component installation must be separately scoped.
 - Promise likely causes and recommended next steps, not a definitive hardware diagnosis.
 
-**Intended Customer**: Home users, sole traders, small businesses experiencing slow performance, crashes, or hardware‑related issues on a computer (Windows or Linux).  
-**Typical Problems Covered**: Slow boot/application launch, frequent crashes or blue screens, overheating, unusual noises, perceived slowness, failure to power on reliably.  
-**Defined Customer Outcome**: A diagnosis of the likely hardware cause(s) of the problem, recommendations for testing or replacement, and a fixed price for any agreed follow‑up work (e.g., component installation).  
+**Intended Customer**: Home users, sole traders, small businesses experiencing slow performance, crashes, or hardware‑related issues on a computer (Windows or Linux).
+**Typical Problems Covered**: Slow boot/application launch, frequent crashes or blue screens, overheating, unusual noises, perceived slowness, failure to power on reliably.
+**Defined Customer Outcome**: A diagnosis of the likely hardware cause(s) of the problem, recommendations for testing or replacement, and a fixed price for any agreed follow‑up work (e.g., component installation).
 **What is Included**:
 - Remote connection to the computer (with customer permission via attended session; customer enters any required credentials) for software‑based checks.
 - Review of system logs for hardware errors (Windows: Event Viewer, Linux: dmesg, journalctl) – read‑only.
 - Check of CPU and temperature readings (if sensors available).
-- Memory (RAM) test for errors – limited to a quick, non‑destructive check if available and safe; otherwise omitted.
-- Disk health check (SMART status, scan for bad sectors if agreed and safe) – limited to non‑destructive short scan.
+- Review of current memory usage and operating-system-reported memory errors; no active memory test.
+- Read existing SMART health information; no bad-sector scans or active disk tests.
 - Review of device manager (Windows) or lspci/lsusb (Linux) for missing drivers or errors.
-- Basic performance benchmark (CPU, memory, disk speed) if agreed and safe.
+- A short, low-risk observation of current performance where appropriate; no stress benchmark.
 - Review of power settings and battery health (for laptops).
 - A written report with findings and recommendations for hardware testing or replacement.
 **What is Excluded**:
@@ -263,11 +265,11 @@ Do not make an absolute legal claim that MECS can never be liable. This document
 - Diagnosis of intermittent issues that require prolonged monitoring.
 - Running destructive disk tests, extended memory tests, or bootable‑memory tests.
 - Shipping of customer devices.
-**Number of Devices Included**: 1 computer (desktop or laptop).  
-**Recommended Time Allowance**: 1 hour.  
+**Number of Devices Included**: 1 computer (desktop or laptop).
+**Recommended Time Allowance**: 1 hour.
 **Information or Access Required from the Customer**:
 - Remote access permission (with ability to run diagnostic tools; customer must attend and grant control; MECS does not request or retain passwords).
-- Administrator password (if required for diagnostics or to change boot order for memory tests) – customer enters it themselves during the attended session.
+- Customer enters any required administrator password themselves during the attended session. No boot-order changes or bootable memory tests.
 - Details of the specific symptoms and when they occur.
 - If physical tests are needed, the customer must make the computer available for a local visit or agree to ship it (shipping costs not included) – but physical inspection or component installation is separately scoped.
 **Conditions that May Prevent Completion**:
@@ -275,10 +277,10 @@ Do not make an absolute legal claim that MECS can never be liable. This document
 - Lack of necessary permissions to run diagnostic tools.
 - The problem is purely physical (e.g., broken screen) and requires disassembly.
 - Customer unwilling to provide access or make the computer available.
-**How Additional Work Should Be Handled**: Any work to replace hardware components, perform data recovery, or reinstall the operating system will be quoted separately.  
-**Can be Delivered Remotely**: The diagnosis phase can be done remotely if the computer can boot and run software; physical tests require local access.  
+**How Additional Work Should Be Handled**: Any work to replace hardware components, perform data recovery, or reinstall the operating system will be quoted separately.
+**Can be Delivered Remotely**: The diagnosis phase can be done remotely if the computer can boot and run software; physical tests require local access.
 **Risks Requiring Explicit Customer Acknowledgement**:
-- Running memory or disk tests can, in rare cases, cause data loss or system instability on already failing hardware.
+- An already failing system can deteriorate during use. Stop investigation if continued activity could increase risk; active memory and disk tests are excluded.
 - The customer acknowledges that they are responsible for backing up critical data before any diagnostic work begins.
 - The engineer is not liable for any data loss or further hardware damage resulting from diagnostic actions, unless due to negligence.
 
@@ -290,9 +292,9 @@ Do not make an absolute legal claim that MECS can never be liable. This document
 - If there is no working remote connection, the enquiry may be considered separately for a local visit.
 - Do not request that customers disclose router passwords.
 
-**Intended Customer**: Home users, sole traders, small businesses experiencing issues with their home or small office network (internet connectivity, Wi‑Fi coverage, device connectivity).  
-**Typical Problems Covered**: No internet access, intermittent connectivity, slow Wi‑Fi speeds, devices unable to connect, router configuration issues, basic network security.  
-**Defined Customer Outcome**: A diagnosis of the likely network issue(s), recommendations for improving connectivity or security, and a fixed price for any agreed follow‑up work (e.g., router reconfiguration).  
+**Intended Customer**: Home users, sole traders, small businesses experiencing issues with their home or small office network (internet connectivity, Wi‑Fi coverage, device connectivity).
+**Typical Problems Covered**: No internet access, intermittent connectivity, slow Wi‑Fi speeds, devices unable to connect, router configuration issues, basic network security.
+**Defined Customer Outcome**: A diagnosis of the likely network issue(s), recommendations for improving connectivity or security, and a fixed price for any agreed follow‑up work (e.g., router reconfiguration).
 **What is Included**:
 - Remote connection to a computer on the network (with customer permission via attended session; customer enters any required credentials) for tests.
 - Check of the public IP address and internet connectivity from the router.
@@ -300,7 +302,7 @@ Do not make an absolute legal claim that MECS can never be liable. This document
 - Test of connectivity to the router (ping, DNS resolution).
 - Wi‑Fi scan for channel overlap and signal strength (if a wireless device is available).
 - Check of IP address assignment (DHCP) and DNS settings on a test device.
-- Review of basic router settings (if accessible): WAN/LAN configuration, Wi‑Fi SSID and password, DHCP range, port forwarding.
+- Read-only review of relevant WAN/LAN, DHCP, DNS, Wi-Fi security and port-forwarding settings without recording passwords.
 - Basic security check: default password check, firmware version, open ports on router (if possible).
 - A written report with findings and recommendations for improving the network.
 **What is Excluded**:
@@ -311,8 +313,8 @@ Do not make an absolute legal claim that MECS can never be liable. This document
 - In‑depth security audit or penetration testing.
 - Setting up guest networks or captive portals.
 - Changing WAN, LAN, DHCP, DNS, Wi‑Fi, firewall, or port‑forwarding settings during the base package unless the customer explicitly approves a small reversible change.
-**Number of Devices Included**: 1 home or small office network (including the router/modem and connected devices). Diagnostics are performed from one test device.  
-**Recommended Time Allowance**: 1 hour.  
+**Number of Devices Included**: 1 home or small office network (including the router/modem and connected devices). Diagnostics are performed from one test device.
+**Recommended Time Allowance**: 1 hour.
 **Information or Access Required from the Customer**:
 - Remote access permission to a computer on the network (or local visit by prior arrangement).
 - Administrator password for the router/web interface (if available and needed for checks) – customer enters it themselves during the attended session.
@@ -321,10 +323,10 @@ Do not make an absolute legal claim that MECS can never be liable. This document
 **Conditions that May Prevent Completion**:
 - Complete lack of internet connectivity preventing remote access to any device.
 - Router/modem is not powered on or not accessible.
-- Customer unwilling to provide router credentials or make equipment available.
+- Customer unable to enter router credentials themselves or make equipment available.
 - The problem is isolated to a specific device's wireless adapter or NIC (may require device‑specific troubleshooting).
-**How Additional Work Should Be Handled**: Any work to replace hardware, run new cables, or reconfigure the network beyond basic advice will be quoted separately.  
-**Can be Delivered Remotely**: Yes, if at least one device on the network is accessible remotely; otherwise, local visit by prior arrangement.  
+**How Additional Work Should Be Handled**: Any work to replace hardware, run new cables, or reconfigure the network beyond basic advice will be quoted separately.
+**Can be Delivered Remotely**: Yes, if at least one device on the network is accessible remotely; otherwise, local visit by prior arrangement.
 **Risks Requiring Explicit Customer Acknowledgement**:
 - Changing router settings (even with permission) can temporarily disrupt internet connectivity for all devices on the network.
 - The customer acknowledges that they are responsible for knowing their ISP credentials and having a backup plan if internet is lost during the session.
@@ -368,7 +370,7 @@ Before accepting any work, MECS must answer the following questions to determine
 1. Is the request within the scope of the defined launch packages or closely related exclusions?
 2. Can the work be delivered remotely, or does it require a local visit (and is the customer willing to arrange/ pay for it)?
 3. Does the customer have realistic expectations about what fixed‑price remote support can achieve?
-4. Is the customer able to provide the necessary access (remote credentials, physical access to equipment)?
+4. Is the customer able to provide the necessary attended access (customer enters credentials themselves)?
 5. Does the customer understand that they are responsible for backing up critical data before any work begins?
 6. Is the customer dealing directly with the engineer (no third‑party intermediaries complicating communication)?
 7. Can the work be completed within the engineer's weekly availability limit (max two active jobs)?
@@ -389,23 +391,18 @@ Before accepting any work, MECS must answer the following questions to determine
 ## Suggested Language Explaining MECS Nature
 > "MECS provides independent IT support from one experienced engineer, with direct communication from enquiry to completion."
 
-## Questions That Must Be Answered Before Prices Can Be Set
-Prices for the launch packages cannot be determined without the following information from the customer:
-1. **Exact Scope**: Which specific package(s) is the customer interested in, and are there any variations from the standard description?
-2. **Access Method**: Will the work be delivered remotely (requiring internet access and remote access credentials), or does it require a local visit (and if so, what is the location)?
-3. **Urgency and Timing**: Does the customer have a preferred timeline, and does it align with the engineer's availability?
-4. **Number of Systems**: For packages that cover multiple devices (e.g., NAS with multiple drives), what is the exact count?
-5. **Specific Concerns**: Are there any particular symptoms, error messages, or goals that the customer wants addressed?
-6. **Environment Details**:
-   - For computer health checks: Operating system version and specifications.
-   - For Linux cleanup: Distribution and version.
-   - For Docker diagnosis: Host OS and Docker version.
-   - For NAS/storage review: Make and model of the device.
-   - For hardware diagnosis: Computer make/model or symptoms.
-   - For network diagnosis: Router make/model and ISP type.
-7. **Data Backup Status**: Confirmation that the customer has backed up critical data or acknowledges the risk of proceeding without a recent backup.
-8. **Risk Acknowledgement**: Has the customer read and acknowledged the specific risks associated with the chosen package?
-9. **Follow‑up Expectations**: Does the customer expect any work beyond the fixed‑price package, and if so, what is the anticipated scope?
-10. **Payment Method**: How does the customer intend to pay (bank transfer, PayPal, credit card via invoice, etc.)?
+## Published Pricing and Suitability Checks
+The six launch prices are published on the website. The suitability check confirms which package fits; it does not replace the advertised price with an unspecified quote.
 
-*Note: Once the above information is provided, MECS will provide a fixed‑price quote for the agreed scope of work. Prices are not published as they depend on the specific context and requirements of each engagement.*
+| Package | Total price | Complete allowance |
+| --- | --- | --- |
+| Windows or Linux Computer Health Check | £55 | Up to 1 hour |
+| Linux Cleanup and Troubleshooting | £85 | Up to 1.5 hours |
+| Docker Problem Diagnosis | £55 | Up to 1 hour |
+| NAS, Storage and Backup Health Review | £85 | Up to 1.5 hours |
+| Hardware and Performance Diagnosis | £55 | Up to 1 hour |
+| Home or Small-Office Network Diagnosis | £55 | Up to 1 hour |
+
+The allowance includes the initial discussion, investigation, approved actions where applicable and written summary. No VAT is added. Additional remote time may be agreed in advance at £27.50 per 30 minutes. Larger, higher-risk and out-of-scope jobs require a separate quotation.
+
+The initial website enquiry asks for device/system, problem and availability, plus the sender's name. The engineer follows up with the detailed triage checklist above before accepting work. Payment methods, cancellation arrangements and final customer terms remain owner decisions; see SITE_STATUS.md.

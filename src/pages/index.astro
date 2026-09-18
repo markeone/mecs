@@ -3,22 +3,22 @@ import Layout from '../layouts/default.astro';
 
 // Page metadata
 const title = 'MECS | Practical IT help with clear fixed prices';
-const description = 'Remote-first IT support for home users, sole traders and small businesses, with clear scopes and fixed prices.';
+const description = 'Remote-first IT support for Microsoft platforms, computers, Linux, Docker, storage and small networks, with clear scopes and fixed prices.';
 ---
 
 <Layout title={title} description={description}>
-  <main>
+  <main id="main-content">
     <!-- Hero section -->
     <section class="hero">
       <h1>Straightforward IT help without the runaround.</h1>
       <p>
-        MECS provides remote-first support for computers, Linux systems, Docker, storage, hardware and small networks.
-        You deal directly with one experienced engineer from enquiry to completion.
+        MECS provides remote-first support for Microsoft platforms, computers, Linux systems, Docker, storage, hardware and small networks.
+        For home users, sole traders and small businesses. You deal directly with one experienced engineer from enquiry to completion.
       </p>
       <p class="tagline">Practical IT help. Clear fixed prices.</p>
       <div class="hero-actions">
         <a href="/services/" class="cta-button primary">View fixed-price services</a>
-        <a href="/contact/" class="cta-button secondary">Check whether your job is suitable</a>
+        <a href="/contact/" class="cta-button secondary">Tell me what’s happening</a>
       </div>
     </section>
 
@@ -28,44 +28,76 @@ const description = 'Remote-first IT support for home users, sole traders and sm
       <div class="services-grid">
         <!-- Computer Health Check -->
         <article class="service-card">
+          <span class="service-code" aria-hidden="true">PC</span>
           <h3>Computer Health Check</h3>
-          <p><strong>Price:</strong> £55 — up to 1 hour</p>
+          <p class="service-price"><strong>£55</strong><span>Up to 1 hour</span></p>
           <p>General checkup for Windows or Linux computers.</p>
         </article>
         <!-- Linux Cleanup and Troubleshooting -->
         <article class="service-card">
+          <span class="service-code" aria-hidden="true">&gt;_</span>
           <h3>Linux Cleanup and Troubleshooting</h3>
-          <p><strong>Price:</strong> £85 — up to 1.5 hours</p>
+          <p class="service-price"><strong>£85</strong><span>Up to 1.5 hours</span></p>
           <p>Cleanup and checks for Linux desktops or servers.</p>
         </article>
         <!-- Docker Problem Diagnosis -->
         <article class="service-card">
+          <span class="service-code" aria-hidden="true">{ }</span>
           <h3>Docker Problem Diagnosis</h3>
-          <p><strong>Price:</strong> £55 — up to 1 hour</p>
+          <p class="service-price"><strong>£55</strong><span>Up to 1 hour</span></p>
           <p>Diagnosis of Docker container or daemon issues.</p>
         </article>
         <!-- NAS and Backup Health Review -->
         <article class="service-card">
+          <span class="service-code" aria-hidden="true">NAS</span>
           <h3>NAS and Backup Health Review</h3>
-          <p><strong>Price:</strong> £85 — up to 1.5 hours</p>
+          <p class="service-price"><strong>£85</strong><span>Up to 1.5 hours</span></p>
           <p>Health check of NAS/storage devices and backup configuration.</p>
         </article>
         <!-- Hardware and Performance Diagnosis -->
         <article class="service-card">
+          <span class="service-code" aria-hidden="true">HW</span>
           <h3>Hardware and Performance Diagnosis</h3>
-          <p><strong>Price:</strong> £55 — up to 1 hour</p>
+          <p class="service-price"><strong>£55</strong><span>Up to 1 hour</span></p>
           <p>Diagnosis of slow performance, crashes or hardware‑related issues.</p>
         </article>
         <!-- Home or Small-Office Network Diagnosis -->
         <article class="service-card">
+          <span class="service-code" aria-hidden="true">NET</span>
           <h3>Home or Small-Office Network Diagnosis</h3>
-          <p><strong>Price:</strong> £55 — up to 1 hour</p>
+          <p class="service-price"><strong>£55</strong><span>Up to 1 hour</span></p>
           <p>Diagnosis of internet, Wi‑Fi or device connectivity problems.</p>
         </article>
       </div>
       <p class="see-more">
         <a href="/services/">See full scope, time allowances and service boundaries</a>
       </p>
+    </section>
+
+    <section class="microsoft-support">
+      <div class="platform-heading">
+        <p class="eyebrow">Microsoft platforms</p>
+        <h2>Support from Windows desktop to Azure</h2>
+        <p>Practical help across Microsoft environments, with the scope agreed before work begins.</p>
+      </div>
+      <div class="platform-grid">
+        <article>
+          <span aria-hidden="true">01</span>
+          <h3>Windows</h3>
+          <p>Windows 10 and 11 health checks, troubleshooting, updates and performance investigation.</p>
+        </article>
+        <article>
+          <span aria-hidden="true">02</span>
+          <h3>Business systems</h3>
+          <p>Windows Server, Hyper-V, Group Policy and Intune device-enrolment experience.</p>
+        </article>
+        <article>
+          <span aria-hidden="true">03</span>
+          <h3>Azure</h3>
+          <p>Support involving Azure virtual machines and storage, assessed and quoted to suit the job.</p>
+        </article>
+      </div>
+      <p class="platform-note">Work outside the fixed-price packages—including migrations, deployments and ongoing management—is separately scoped.</p>
     </section>
 
     <!-- Why choose MECS -->

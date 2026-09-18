@@ -4,20 +4,18 @@ import Wordmark from './Wordmark.astro';
 // Navigation items
 const navItems = [
   { path: '/', label: 'Home' },
-  { path: '/services', label: 'Services' },
-  { path: '/about', label: 'About' },
-  { path: '/contact', label: 'Contact' },
-  { path: '/privacy', label: 'Privacy' },
-  { path: '/terms', label: 'Service Terms' }
+  { path: '/services/', label: 'Services' },
+  { path: '/about/', label: 'About' },
+  { path: '/contact/', label: 'Contact' }
 ];
 ---
 
 <header class="header">
-  <nav>
+  <nav aria-label="Main navigation">
     <Wordmark />
     <ul>
       {navItems.map(item => (
-        <li><a href={item.path}>{item.label}</a></li>
+        <li><a href={item.path} aria-current={Astro.url.pathname.replace(/\/$/, '') === item.path.replace(/\/$/, '') ? 'page' : undefined}>{item.label}</a></li>
       ))}
     </ul>
   </nav>

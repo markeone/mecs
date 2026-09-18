@@ -3,7 +3,7 @@ import Layout from '../../layouts/default.astro';
 ---
 
 <Layout title="Contact MECS | Check whether your job is suitable" description="Contact MECS about remote-first fixed-price IT support for computers, Linux, Docker, storage, hardware and small networks.">
-  <main>
+  <main id="main-content">
     <!-- Introduction -->
     <section class="intro">
       <h1>Tell MECS what is happening</h1>
@@ -19,34 +19,19 @@ import Layout from '../../layouts/default.astro';
     <!-- Email contact -->
     <section class="email-contact">
       <h2>Email MECS</h2>
-      <p>
-        <a href="mailto:mr.markeggleston@gmail.com?subject=MECS%20service%20enquiry" class="cta-button">
-          mr.markeggleston@gmail.com
-        </a>
-      </p>
-      <p>
-        <a href="mailto:mr.markeggleston@gmail.com?subject=MECS%20service%20enquiry" class="cta-button">
-          Email MECS
-        </a>
-      </p>
+      <p><a href="mailto:mr.markeggleston@gmail.com?subject=MECS%20service%20enquiry" class="cta-button">Email MECS</a></p>
+      <p class="email-address">Or copy this address: <span>mr.markeggleston@gmail.com</span></p>
     </section>
 
     <!-- Enquiry checklist -->
     <section class="enquiry-checklist">
       <h2>What to include in your email</h2>
       <ul>
-        <li>Your name</li>
-        <li>Which service you think may fit, if known</li>
-        <li>The device or system involved</li>
-        <li>Operating system and version, if known</li>
-        <li>A plain description of what is happening</li>
-        <li>Exact error messages, if available</li>
-        <li>When the problem began</li>
-        <li>Any recent changes</li>
-        <li>Whether the affected system starts and has internet access</li>
-        <li>Whether important data is backed up</li>
-        <li>Suitable times for an appointment</li>
+        <li>The device or system you need help with</li>
+        <li>A short description of the problem</li>
+        <li>When you are available for an appointment</li>
       </ul>
+      <p>Include your name so I know how to address you. If more detail is needed, I’ll ask about error messages, recent changes, internet access and backups before confirming the appointment.</p>
     </section>
 
     <!-- Security warning -->
